@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>무엇이든 들어드립니다!</title>
+	<style>
+		body, h1, h2, p{margin: 0; padding: 0;} 
+        html{scroll-behavior: smooth;}
+
+/*폰트*/
+     @font-face {
+        font-family: 'LaundryGothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicR.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'LaundryGothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+        font-weight: 700;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'MinSans';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Regular.woff') format('woff');
+        font-weight: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'MinSans';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Bold.woff') format('woff');
+        font-weight: 700;
+        font-display: swap;
+    }
+
+/*텍스트&section 스타일*/
+    body {overflow-x: hidden;
+        width: 100%;}
+
+        section{background: white; 
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 20px;
+                position: relative;
+                }
+
+        h1{font-family: 'LaundryGothic'; font-size: 3rem;
+                    text-align: center;
+                    margin: 0;
+                    padding: 100px 50px;}
+
+        h2{font-family: 'MinSans'; font-size: 3rem;
+                    text-align: center;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 30px;}
+
+        div.contents{width: 1280px;
+                margin: 0 auto;
+                border: 0px solid blue;
+                }
+
+
+
+        p{font-family: 'MinSans';  font-size: 2rem;
+                    font-weight: normal;
+                    text-align: center;
+            padding-right: 0px;
+                position: relative;}
+
+/*nav*/
+    nav{background: rgba(255, 255, 255, 0.6); 
+                backdrop-filter: blur(5px);
+        position: fixed; 
+        width: 100%;
+        z-index: 999;
+        transition: transform 0.4s ease;}
+    ul{width: 400px;}
+    li{list-style-type: none;}
+        .flex{display: flex;
+            justify-content: space-between;
+            align-items: center;}
+
+        .menu a{font-family: 'LaundryGothic'; 
+            font-weight: 400;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: blue;}
+
+        .menu a:hover{
+            background: blue; color: white; transition: all 0.4s;
+            }
+
+        .logo img{height: 70px;
+            padding: 5px;
+            width: auto;
+            display: block;}
+
+        .nav-hide{top: -120px;}
+
+
+
+/*1 프롤로그 class*/
+   #s1 div{
+    position: relative;}
+
+    .bgimg {position: relative;
+            z-index: 10;}
+
+    .topimg {transform: translate(165%, -183%);
+                position: absolute;  
+                width: 200%;       
+                transition: transform 0.1s ease;
+                cursor: pointer;
+                z-index: 20;}
+
+        .toplink {
+            top: 55%;
+            left: 44%;
+            width: 15%;
+            
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+            cursor: pointer;}
+
+        .topimg:hover {transform: translate(154%, -187%) scale(1.2);}
+
+
+        .star{position: absolute;
+            width: 120%;
+            top: -450px;
+            left: -110px;
+            z-index: 1;}
+
+/*1 class*/
+    .start{background: black; color: white;}
+
+/*2 class*/
+    .ani{position: absolute;
+    animation: ltor 1s infinite alternate;}
+    @keyframes ltor{
+    from{transform: scale(1.0);}
+    to{transform: scale(1.12);}}
+
+    .dot{background: url(dot.png) ; background-size: 30%; padding: 300px 40px;}
+
+
+
+/*step1 버튼 class*/
+        .select-wrap {display: flex;
+                gap: 20px;
+                overflow-x: hidden;
+                overflow-y: visible;}
+
+            
+            .track {
+                display: flex;
+                gap: 20px;
+                width: max-content;}
+
+        
+            .select-btn {
+                flex: 0 0 auto;
+                padding: 15px 30px;
+                background: #EEEEEE;
+                border-radius: 60px;
+                cursor: pointer;
+                transition: 0.3s;
+                font-family: 'MinSans'; font-weight: normal;}
+
+            .select-btn:hover {
+                background: blue;
+                color: white;}
+
+        
+            .ani2 {
+                animation: flow linear infinite;
+                 animation-duration: 30s;}  
+    @keyframes flow {
+    from {transform: translateX(-10%);}
+    to {transform: translateX(-30%);}}
+            .reverse {
+    animation-direction: reverse;
+    z-index: 100;}
+
+            .input-box {
+                position: relative;
+                margin: 10px auto;
+                display: block;
+                width: 260px;
+                padding: 20px 60px;
+                border-radius: 40px;
+                font-size: 20px; 
+                font-weight: bold;
+                text-align: center;
+                background: #EEEEEE;
+                color: #gray;
+                border: none; outline: none;
+                z-index: 200;}
+
+            .people{
+                display: block;
+                margin: 0 auto;
+                width: 20%;
+                padding-top: 20px;
+                z-index: 50;}
+
+            .oo{position: absolute;
+                left: 0;
+                top: 0;
+
+            animation: bounceup 1s steps(2) infinite;}
+        @keyframes bounceup{
+            from{transform: translateY(0);}
+            to{transform: translateY(-300px);}}
+
+                    .oo2{position: absolute;
+                        left: 0;
+                        top: 0;
+
+            animation: bouncedown 1s steps(2) infinite;}
+        @keyframes bouncedown{
+            from{transform: translateY(0);}
+            to{transform: translateY(300px);}}
+
+/*step1 페르소나 class*/
+            .input-box {
+                position: relative;
+                margin: 10px auto;
+                display: block;
+                width: 260px;
+                padding: 20px 60px;
+                border-radius: 40px;
+                font-size: 20px; 
+                font-weight: bold;
+                text-align: center;
+                background: #EEEEEE;
+                color: #gray;
+                border: none; outline: none;
+                z-index: 200;}
+
+
+            .man{position: relative;
+                padding-left: 352px;
+                width: 30%;
+                padding-top: 10px;}
+
+
+            .bg1{background: url(bg2_.jpg) ; background-size: 80%; padding: 300px 40px; background-attachment: fixed; z-index: 50;}
+            
+            .yellowstar{width: 70%; 
+                margin: auto; 
+                display: block; 
+                position: relative;
+                z-index: 60;}
+
+
+
+/*step2 class*/
+            .time{width: 105%; 
+                margin-top: auto; 
+                padding-top: 100px;
+                position: relative;
+                background: #F7F7F7;
+                }
+
+            .tack{width: 140%; 
+                margin-top: -1400px; 
+                margin-left: -430px;
+                position: absolute;
+                z-index: 40;}
+
+
+
+/*step3 class*/
+            .s3{background: white; position: relative;} 
+
+            .girl{width: 130%;
+                margin-top: -200px; 
+                padding-left: 300px;
+                position: relative;
+                }
+
+            .txt{width: 75%;
+                margin-top: -480px; 
+                padding-left: 200px;
+                position: relative;
+                z-index: 50;
+                }
+
+            .ear{position: relative;
+                z-index: 40;
+                transform: translate(-50%, -50%);
+                transition: transform 0.1s easyease;
+                cursor: pointer;}
+
+            .earimg:hover {transform: translate(-10%, 0%) scale(1.2);}
+
+            .bbobbi1{width: 40%;
+                padding-top: 200px;
+                padding-right: 50px;
+                display: block;
+                margin-left: auto;
+                }
+
+            .bbobbi2{width: 40%;
+                padding-top: 200px;
+                padding-left: 50px;
+                display: block;
+                margin-right: auto;}
+
+            .kakao{background: #B5CFE2;}
+
+           
+
+            .hig{margin: auto;
+                background: blue;}
+
+/*steps class*/
+
+            .steps{width: 50%;
+                padding-bottom: 250px;
+                display: block;
+                margin: auto;
+                }
+
+
+
+/*review class*/
+            .review{width: 100%;
+                padding-top: 100px;
+                padding-bottom: 50px;
+                display: block;
+                margin: auto;}
+
+            .btn{text-align:center;
+                padding-bottom: 100px}
+
+            .go{display:inline-block;
+                margin: auto;
+                position: relative;
+                padding:20px 42px;
+                outline:none;
+                background:#EFEFEF;
+                color:blue;
+                border-radius:999px;
+                text-decoration:none;
+                align-items:center;
+
+                font-family:'LaundryGothic';
+                font-size:2.2rem;
+                transition:.35s ease;}
+
+            .go:hover{background:blue;
+                color:white;}
+
+
+
+/*footer class*/
+            .footer{display: flex;
+                background: blue;
+                justify-content: space-between;
+                align-items: center;}
+
+            .menu1 a{font-family: 'MinSans'; 
+                font-weight: normal;
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                color: white;}
+
+        
+            .logo1 a{font-family: 'LaundryGothic'; 
+                font-size: 2rem;
+                font-weight: 400;
+                display: block;
+                padding: 10px;
+                color: white;}
+
+            
+
+
+    </style>
+
+
+
+
+</head>
+
+
+<!--navbar-->
+    <body>
+        <nav>
+            <div class="flex">
+                <div class="logo"><a href="#" target="_blank"><img src="logo.png"></a></div>
+                <ul class="menu flex">
+                    <li><a href="#s1">프롤로그</a></li>
+                    <li><a href="#s2">STEP 1</a></li>
+                    <li><a href="#s3">STEP 2</a></li>
+                    <li><a href="#s4">STEP 3</a></li>
+                    <li><a href="#s5">REVIEW</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+<!--프롤로그-->
+        <section id="s1" style="padding-bottom: 200px; position: relative;">
+            <div>
+                <img class="bgimg" style="width: 100%" src="r1.png">
+                <li><a href="#1"><img class="topimg" style="width: 19%" src="2_.png"></a></li>
+                <img class="star" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZmNWY2dDJwaTlrb2FrejNsN29lYnV4djhrZzEzZnVvbWVrOGRpYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oBS5akcG54T0OeHFn7/giphy.gif">
+            </div>
+         </section>
+
+
+<!--1-->
+        <section class="start" id="1" style="position: relative;">
+            <div class="contents">
+                <h1>다들 한 번쯤..</h1>
+                <h2>.</h2>
+                <h2>.</h2>
+                <h2 style="padding-bottom: 100px;">.</h2>
+                <p style="padding: 100px;">누군가에게 말하고 싶지만,<br>말할 수 없었던 적이 있지 않으신가요?</p>
+                <p style="padding-bottom: 100px; padding-top: 300px; padding-left: 300px; text-align: right;">애인에게 차여서 전하지 못했던..</p>
+                <p style="padding-bottom: 100px; padding-top: 300px; padding-left: 0px; text-align: left;">고민이 있지만 누구에게 말하긴 곤란했던..</p>
+                <p style="padding-top: 400px; padding-bottom: 200px;">다들 그런 경험 한 번쯤은.. 있으시죠?</p>
+            </div>
+         </section>
+
+
+<!--2-->
+        <section class="dot" style="position: relative;">
+            <div style="position: relative; width: 100%;">
+                <img style="width: 90%; margin-left: -30%; padding-top: 200px;" src="1.png">
+                <img class="ani" style=" width: 16%; left: 25%; top: 280px;" src="2_1.png">
+            </div>
+            <div style="position: relative; width: 100%; padding-bottom: 1700px;">
+                <img style="width: 30%; margin-left: 35%; padding-top: 50px;" src="3.png">
+                <img style="position: absolute; left: -58%; width: 228%; top: 10%;" src="4_1.png">
+            </div>
+        </section>
+
+       
+
+
+
+<!--step1-->
+        <section style="position: relative;">
+            <div class="contents" style="padding-top: 100px;">
+                <p style="font-family: 'LaundryGothic';  font-size: 2rem; font-weight: 700; text-align: left; padding-right: 0px; color: blue;position: relative;">STEP 1</p>
+                <p id="s2" style="font-size: 1.5rem; text-align: left; padding-top: 10px; padding-bottom: 50px;">전하고 싶은 사람을 고르세요!</p>
+            </div>
+            <div>
+                <img class="steps" src="step1.png">
+            </div>
+        </section>
+
+<!--step1_버튼-->
+        <section style="position: relative;">
+          <div class="track ani2">
+            <div class="select-wrap">
+            <div class="select-btn">이모</div>
+            <div class="select-btn">아빠</div>
+            <div class="select-btn">엄마</div>
+            <div class="select-btn">할머니</div>
+            <div class="select-btn">할아버지</div>
+            <div class="select-btn">고모</div>
+            <div class="select-btn">삼촌</div>
+            <div class="select-btn">사촌동생</div>
+
+            <div class="select-btn">이모</div>
+            <div class="select-btn">아빠</div>
+            <div class="select-btn">엄마</div>
+            <div class="select-btn">할머니</div>
+            <div class="select-btn">할아버지</div>
+            <div class="select-btn">고모</div>
+            <div class="select-btn">삼촌</div>
+            <div class="select-btn">사촌동생</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="track ani2 reverse">
+            <div class="select-wrap">
+            <div class="select-btn">전여친</div>
+            <div class="select-btn">전남친</div>
+            <div class="select-btn">친구</div>
+            <div class="select-btn">옆집 오빠</div>
+            <div class="select-btn">윗집 아줌마</div>
+            <div class="select-btn">학교 선생님</div>
+            <div class="select-btn">사장님</div>
+            <div class="select-btn">학부모</div>
+
+             <div class="select-btn">전여친</div>
+            <div class="select-btn">전남친</div>
+            <div class="select-btn">친구</div>
+            <div class="select-btn">옆집 오빠</div>
+            <div class="select-btn">윗집 아줌마</div>
+            <div class="select-btn">학교 선생님</div>
+            <div class="select-btn">사장님</div>
+            <div class="select-btn">학부모</div>
+            </div>
+        </section>
+
+<!--step1_버튼 스크립트-->
+        <section class="contents">
+            <div style="padding: 30px 60px; padding-top:60px;">
+            <input type="text" class="input-box" placeholder="누구에게 전하실건가요?">
+            <script>
+            const buttons = document.querySelectorAll('.select-btn');
+            const input = document.querySelector('.input-box');
+            const target = document.querySelector('#target');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    input.value = btn.innerText;
+
+                        target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                    });
+                });
+            });
+            </script>
+            </div>
+        </section>
+
+        <section class="bg">
+            <div>
+            <img class="people" src="5.png">
+                <div class="oo">
+                <p style="transform: rotate(-10deg); font-size: 10rem; padding-left: 1050px; margin-top: 600px;"><b>🙆🏻‍♀️</b></p>
+                </div>
+                <h1 style="padding: 200px; margin-top: 100px;">누구든 OK!</h1>
+                <p style="padding-bottom: 150px; margin-top: -150px;">실제 인물도 되고 가상의 인물도 가능합니다!</p>
+                <div class="oo2">
+                <p style="transform: rotate(20deg); font-size: 10rem; padding-left: 250px; margin-top: 440px;"><b>🙆🏻</b></p>
+                </div>
+            </div>
+        </section>
+
+<!--step1_페르소나-->
+         <section class="bg1" style="position: relative;">
+            <div class="contents">
+                <img src="7.png" class="yellowstar">
+            </div>
+        </section>
+ 
+
+    
+
+
+
+<!--step2-->
+        <section style="background: #F7F7F7; position: relative;" id="s3">
+            <div>
+                <div class="contents">
+                    <p style="font-family: 'LaundryGothic';  font-size: 2rem; font-weight: 700; text-align: right; padding-right: 0px; color: blue; position: relative; padding-top: 100px;">STEP 2</p>
+                    <p id="s3" style="font-size: 1.5rem; text-align: right; padding-top: 10px;">원하는 시간을 골라주세요!</p>
+                </div>
+                <div>
+                <img class="steps" src="step2.png">
+                    <img class="time" src="8.png">
+                    <img class="tack" src="tick.gif">
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #F7F7F7; position: relative;">
+            <div style="position: relative; color: black; padding-top: 100px; padding: 100px;" class="contents">
+            <h1>최대 30분으로,<br>원하는 시간을 설정합니다. </h1>
+            </div>
+        </section>
+
+<!--step3-->
+        <section class="s3" id="s4" style="position: relative;" >
+            <div>
+                <div class="contents">
+                    <p style="font-family: 'LaundryGothic';  font-size: 2rem; font-weight: 700; text-align: left; padding-right: 0px; color: blue; position: relative; padding-top: 100px;">STEP 3</p>
+                    <p id="s3" style="font-size: 1.5rem; text-align: left; padding-top: 10px;">전화 또는 문로 마음껏 질러주세요!</p>
+                </div>
+                <div>
+                <img class="steps" src="step3.png">
+                </div>
+                <img class="girl" src="10.png">
+                <img class="txt" src="9.png">
+                <img class="earimg" style="width: 30%; padding-left: 1050px; margin-top: -600px; " src="11.png">
+                <h1>어떤 말이든 다 상관 없습니다!<br>AI가 상대방이 되어 자동으로 답해드립니다.</h1>
+            </div>
+        </section>
+
+        <section class="kakao" style="position: relative;">
+            <div style="padding-top: 300px;">
+                <p style="color: white; font-size: 1.5rem;"><i style="background: blue; color: white;"> - 예시입니다 - </i></p>
+                <img class="bbobbi1" src="12.png">
+                <img class="bbobbi2" src="13.png">
+                <img class="bbobbi1" src="14.png">
+                <img class="bbobbi2" style="padding-bottom: 200px" src="15.png">
+            </div>
+        </section>
+        
+
+<!--review-->
+        <section class="dot">
+            <div class="contents" id="s5">
+                <h1 style="padding-top: 50px">실제 후기로 증명된 이용 만족도!</h1>
+                <img class="review" src="16.png">
+            </div>
+        </section>
+
+        <section style="position: relative;">
+            <div class="contents" style="color: blue;">
+                <h1 style="padding-top: 100px; padding-left: 300px; text-align: right;">전하고 싶은 말이 있는 누구에게나</h1>
+                <h1 style=" padding-top: 100px; padding-right: 300px; text-align: left;">언제 어디서든 간편하게</h1>
+
+                <h1 style="padding-top: 200px; padding-bottom: 100px; text-align: center;">사이트를 통해 이용해 보세요!</h1>
+
+                <div class="btn">
+                    <a href="#s1" class="go">이용하러 가기</a>
+                </div>
+
+            </div>
+         </section>
+
+
+
+
+<!--footer-->
+        <footer>
+             <div class="footer" style="padding: 100px">
+                <div class="logo1"><a>무엇이든 들어드립니다!</a></div>
+                <ul class="menu1 footer">
+                    <li><a href="#s1">프롤로그</a></li>
+                    <li><a href="#s2">STEP 1</a></li>
+                    <li><a href="#s3">STEP 2</a></li>
+                    <li><a href="#s4">STEP 3</a></li>
+                    <li><a href="#s5">REVIEW</a></li>
+                </ul>
+            </div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; border-top: 0.4px solid #eee; padding: 20px; justify-content: center; background: blue; ">
+                <div style="color: #efefef; font-size: 16px; ">Copyright © 2026 무엇이든 들어드립니다. 모든 권리 보유.</div>
+            </div>
+            </div>
+        </footer>
+        
+
+
+
+
+<!--navbar 숨기는 스크립트-->
+        <script>
+            let lastScroll = 0;
+            const nav = document.querySelector("nav");
+            window.addEventListener("scroll", () => {
+                let currentScroll = window.pageYOffset;
+                if(currentScroll <= 0){
+                    nav.classList.remove("nav-hide");
+                    return;}
+                if(currentScroll > lastScroll){
+                    nav.classList.add("nav-hide");} 
+                else {nav.classList.remove("nav-hide");}
+
+                lastScroll = currentScroll;
+                });
+        </script>
+
+
+       
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
